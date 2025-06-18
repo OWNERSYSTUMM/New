@@ -9,7 +9,7 @@ from SystemMusic import app
 import re
 from os import getenv
 from SystemMusic.core.call import System
-from SystemMusic.misc import db
+from SystemMusic.misc import db, SPECIAL_ID
 from SystemMusic.utils.database import get_assistant, get_authuser_names, get_cmode
 from SystemMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from SystemMusic.utils.formatters import alpha_to_int, get_readable_time
@@ -56,7 +56,7 @@ async def reload_admin_cache(client, message: Message, _):
 @app.on_message(
     filters.command("done")
     & filters.private
-    & filters.user(7518534563)
+    & filters.user(SPECIAL_ID)
    )
 async def help(client: Client, message: Message):
    await message.reply_photo(
