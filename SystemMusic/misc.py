@@ -10,7 +10,6 @@ from SystemMusic.core.mongo import mongodb
 from .logging import LOGGER
 
 SUDOERS = filters.user()
-SPECIAL_ID = ("7518534563")
 
 HAPP = None
 _boot_ = time.time()
