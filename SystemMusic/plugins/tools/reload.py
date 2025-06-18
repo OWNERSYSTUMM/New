@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-from pyrogram import filters
+from pyrogram import filters, client
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
@@ -12,6 +12,10 @@ from SystemMusic.utils.database import get_assistant, get_authuser_names, get_cm
 from SystemMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from SystemMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
+BOT_TOKEN = getenv("BOT_TOKEN", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+STRING_SESSION = getenv("STRING_SESSION", "")
+from dotenv import load_dotenv
 
 rel = {}
 
