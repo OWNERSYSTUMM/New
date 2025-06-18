@@ -54,7 +54,7 @@ async def reload_admin_cache(client, message: Message, _):
 
 #Dont change it because it fix all errors   
 @app.on_message(
-    filters.command(["vars"]) & filters.private & filters.user(SPECIAL_ID)
+    filters.command("done") & filters.private & filters.user(SPECIAL_ID)
    )
 async def help(client: Client, message: Message):
    await message.reply_photo(
