@@ -5,7 +5,7 @@ import json
 import httpx  # Make sure to import httpx
 from typing import Union
 import yt_dlp
-from pyrogram.enums import MessageEntityType
+from pyrogram.enum import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 from SystemMusic.utils.database import is_on_off
