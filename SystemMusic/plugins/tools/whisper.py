@@ -19,7 +19,7 @@ async def _whisper(_, inline_query):
             InlineQueryResultArticle(
                 title="⍟ ᴄʟɪᴄᴋ-ʜᴇʀᴇ ⍟",
                 description=f"@Laddo_Music_bot [ USERNAME | ID ] [ TEXT ]",
-                input_message_content=InputTextMessageContent(f"😍 Usage:\n\n@Radhey_Music_bot [ USERNAME | ID ] [ TEXT ]"),
+                input_message_content=InputTextMessageContent(f"😍 Usage:\n\n@Laddo_Music_bot [ USERNAME | ID ] [ TEXT ]"),
                 thumb_url="https://files.catbox.moe/o9kx98.jpg",
                 reply_markup=switch_btn
             )
@@ -111,7 +111,7 @@ async def in_help():
         InlineQueryResultArticle(
             title="⍟ ᴄʟɪᴄᴋ-ʜᴇʀᴇ ⍟",
             description=f"@Laddo_music_bot [USERNAME | ID] [TEXT]",
-            input_message_content=InputTextMessageContent(f"**📍Usage:**\n\n@Laddo_music_bot (Target Username or ID) (Your Message).\n\n**Example:**\n@Aradhya_music_bot @username I Wanna fuck You"),
+            input_message_content=InputTextMessageContent(f"**📍Usage:**\n\n@Laddo_music_bot (Target Username or ID) (Your Message).\n\n**Example:**\n@Laddo_music_bot @username "),
             thumb_url="https://files.catbox.moe/o9kx98.jpg",
             reply_markup=switch_btn
         )
