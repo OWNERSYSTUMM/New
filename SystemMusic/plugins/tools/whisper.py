@@ -98,8 +98,8 @@ async def whispes_cb(_, query):
         msg = "🚫 Error!\n\nWhisper has been deleted from the database!"
     
     SWITCH = InlineKeyboardMarkup([[InlineKeyboardButton("⍟ Go Inline ⍟", switch_inline_query_current_chat="")]])
-
-await query.answer(msg, show_alert=True)
+    
+    await query.answer(msg, show_alert=True)
     
     if len(data) > 3 and data[3] == "one":
         if user_id == to_user:
@@ -111,7 +111,7 @@ async def in_help():
         InlineQueryResultArticle(
             title="⍟ ᴄʟɪᴄᴋ-ʜᴇʀᴇ ⍟",
             description=f"@Radhey_Music_bot [USERNAME | ID] [TEXT]",
-            input_message_content=InputTextMessageContent(f"📍Usage:\n\n@ImNancybot (Target Username or ID) (Your Message).\n\nExample:\n@Aradhya_music_bot @username I Wanna fuck You"),
+            input_message_content=InputTextMessageContent(f"**📍Usage:**\n\n@ImNancybot (Target Username or ID) (Your Message).\n\n**Example:**\n@Aradhya_music_bot @username I Wanna fuck You"),
             thumb_url="https://files.catbox.moe/o9kx98.jpg",
             reply_markup=switch_btn
         )
@@ -129,3 +129,4 @@ async def bot_inline(_, inline_query):
     else:
         answers = await _whisper(_, inline_query)
         await inline_query.answer(answers[-1], cache_time=0)
+                                               
